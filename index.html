@@ -154,13 +154,13 @@
   <script src="js/application.js"></script>
 	<script>
 		$(document).ready(function(){
-			$.ajax({
-				method:'POST',
-				url:'http://yema.sturgeon.mopaas.com/',
-				success:function(data){
-					alert(data);
-				}
-			});
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'http://yema.sturgeon.mopaas.com/proxy.html');
+			xhr.onreadystatechange = function(e) {
+			  if(xhr.readyState === 4)
+				alert(xhr.responseText);
+			};
+			xhr.send();
 		});
 	</script>
 </body>
