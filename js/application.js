@@ -50,9 +50,9 @@
       }
     });
     $workItem.on('click', function() {
-      var url;
+      /*var url;
       url = $(this).data('url');
-      return window.location.href = url;
+      return window.location.href = url;*/
     });
     $grid.shuffle({
       itemSelector: $workItem,
