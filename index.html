@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <title>一表人渣@的小站</title>
     <meta name="description" content="Lithium Description" />
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <link href="css/plugins.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="css/application.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
@@ -148,6 +151,16 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>');</script>
   <script src="js/plugins.js"></script>
   <script src="js/application.js"></script>
-
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				method:'POST',
+				url:'http://yema.sturgeon.mopaas.com/',
+				success:function(data){
+					alert(data);
+				}
+			});
+		});
+	</script>
 </body>
 </html>
