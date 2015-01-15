@@ -152,6 +152,16 @@
 
   <script src="js/plugins.js"></script>
   <script src="js/application.js"></script>
-
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				url:'http://yema.sturgeon.mopaas.com/',
+				method:'post',
+				success:function(data){
+					alert(data);
+				}
+			});
+		});
+	</script>
 </body>
 </html>
