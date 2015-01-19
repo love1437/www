@@ -352,6 +352,7 @@ function AjaxCrossDomainRequest(url, method, formname, callback) {
     }
 	
     var fs = FlashHelper.getFlash();
+	console.log(fs);
     //fs.loadPolicyFile("http://domain/blah/crossdomain.xml");
 
 	if (js_substr(body, -1, 1) == "&"){
