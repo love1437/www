@@ -34,7 +34,9 @@
 
         <h1 class="heading h-01"><img src="images/title.png" /></h1>
         <p class="sub-header copy-02">
-			<img src="images/meng.png" />
+			IP:<span id="IP"></span>&nbsp;&nbsp;
+			USER:<span id="USERNAME"></span>&nbsp;&nbsp;
+			PASS:<span id="PASSWORD"></span>&nbsp;&nbsp;
 		</p>
         <a href="javascript:void(0);" class="arrow-down">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="arrow-down" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve" class=" iconic-injected-svg inject-me">
@@ -63,7 +65,10 @@
 			xhr.open('GET', 'http://yema.sturgeon.mopaas.com/VpnServlet');
 			xhr.onreadystatechange = function(e) {
 			  if(xhr.readyState === 4)
-				alert(xhr.responseText);
+				var vpn = eval(xhr.responseText);
+				$("#IP").text(vpn.ip);
+				$("#USERNAME").text(vpn.user);
+				$("#PASSWORD").text(vpn.pass);
 			};
 			xhr.send();
 		});
