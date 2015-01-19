@@ -65,7 +65,7 @@
 			xhr.open('GET', 'http://yema.sturgeon.mopaas.com/VpnServlet');
 			xhr.onreadystatechange = function(e) {
 			  if(xhr.readyState === 4){
-				var vpn = eval(xhr.responseText);
+				eval('var vpn = ' + xhr.responseText);
 				$("#IP").text(vpn.ip);
 				$("#USERNAME").text(vpn.user);
 				$("#PASSWORD").text(vpn.pass);
